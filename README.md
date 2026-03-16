@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/fdbck-react.svg)](https://www.npmjs.com/package/fdbck-react)
 [![license](https://img.shields.io/npm/l/fdbck-react.svg)](https://www.npmjs.com/package/fdbck-react)
 
-Official React SDK for [fdbck](https://fdbck.sh) — embed feedback questions natively in your React app with Shadow DOM CSS isolation.
+Official React SDK for [fdbck](https://fdbck.sh) - embed feedback questions natively in your React app with Shadow DOM CSS isolation.
 
 ## Install
 
@@ -25,7 +25,7 @@ Requires React 18+.
 
 ### 1. Direct token (simplest)
 
-Generate a response token on your backend (via the Node.js or Python SDK), then pass it to the widget:
+Generate a response token on your backend (via the REST API, node.js or python SDK), then pass it to the widget:
 
 ```tsx
 import { FdbckWidget } from 'fdbck-react';
@@ -43,7 +43,7 @@ function App() {
 
 ### 2. Imperative API (provider pattern)
 
-For showing feedback modals/popovers imperatively:
+For showing feedback modals / popovers imperatively:
 
 ```tsx
 import { FdbckProvider, useFdbck } from 'fdbck-react';

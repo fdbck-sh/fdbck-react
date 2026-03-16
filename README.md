@@ -1,11 +1,24 @@
 # fdbck-react
 
+[![npm version](https://img.shields.io/npm/v/fdbck-react.svg)](https://www.npmjs.com/package/fdbck-react)
+[![npm downloads](https://img.shields.io/npm/dm/fdbck-react.svg)](https://www.npmjs.com/package/fdbck-react)
+[![license](https://img.shields.io/npm/l/fdbck-react.svg)](https://www.npmjs.com/package/fdbck-react)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/fdbck-react)](https://bundlephobia.com/package/fdbck-react)
+
 Official React SDK for [fdbck](https://fdbck.sh) — embed feedback questions natively in your React app with Shadow DOM CSS isolation.
 
 ## Install
 
 ```bash
 npm install fdbck-react
+```
+
+```bash
+yarn add fdbck-react
+```
+
+```bash
+pnpm add fdbck-react
 ```
 
 Requires React 18+.
@@ -139,6 +152,13 @@ The widget uses `useEffect` for all DOM operations (Shadow DOM, fetch). It rende
 ## Bundle size
 
 ~7KB gzipped (including all CSS).
+
+## Links
+
+- [npm](https://www.npmjs.com/package/fdbck-react)
+- [Documentation](https://docs.fdbck.sh/sdks/react)
+- [GitHub](https://github.com/fdbck-sh/fdbck-react)
+- [fdbck](https://fdbck.sh)
 
 ## License
 

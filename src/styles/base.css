@@ -1,0 +1,108 @@
+/* fdbck widget — base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:host {
+  display: block;
+  font-family: var(--fdbck-font-family);
+  font-size: var(--fdbck-font-size);
+  line-height: 1.5;
+  color: var(--fdbck-text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+.fdbck-card {
+  width: var(--fdbck-width);
+  max-width: var(--fdbck-max-width);
+  background: var(--fdbck-card-bg);
+  border: 1px solid var(--fdbck-border);
+  border-radius: var(--fdbck-border-radius);
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.fdbck-welcome {
+  font-size: var(--fdbck-font-size);
+  color: var(--fdbck-text-secondary);
+  margin-bottom: 1rem;
+  white-space: pre-line;
+}
+
+.fdbck-question {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--fdbck-text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.fdbck-error-text {
+  color: #ef4444;
+  font-size: var(--fdbck-font-size);
+  margin-bottom: 1rem;
+}
+
+.fdbck-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.fdbck-loading {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fdbck-spinner {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid transparent;
+  border-top-color: var(--fdbck-accent);
+  border-right-color: var(--fdbck-accent);
+  border-radius: 50%;
+  animation: fdbck-spin 0.6s linear infinite;
+}
+
+@keyframes fdbck-spin {
+  to { transform: rotate(360deg); }
+}
+
+.fdbck-error-state {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.fdbck-error-state h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--fdbck-text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.fdbck-error-state p {
+  color: var(--fdbck-text-secondary);
+}
+
+.fdbck-retry-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--fdbck-border);
+  border-radius: 0.5rem;
+  background: transparent;
+  color: var(--fdbck-text-primary);
+  font-size: var(--fdbck-font-size);
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.fdbck-retry-btn:hover {
+  border-color: var(--fdbck-accent);
+}

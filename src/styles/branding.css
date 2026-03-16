@@ -1,0 +1,25 @@
+/* fdbck widget — "Powered by fdbck" footer */
+.fdbck-branding {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--fdbck-border);
+}
+
+.fdbck-branding a {
+  font-size: 0.75rem;
+  color: var(--fdbck-text-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.fdbck-branding a:hover {
+  color: var(--fdbck-text-secondary);
+}
+
+.fdbck-branding-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  color: var(--fdbck-accent);
+}

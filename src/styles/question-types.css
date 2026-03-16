@@ -1,0 +1,162 @@
+/* fdbck widget — question type styles */
+
+/* Shared option button */
+.fdbck-option-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--fdbck-border);
+  border-radius: 0.5rem;
+  background: transparent;
+  color: var(--fdbck-text-primary);
+  font-size: var(--fdbck-font-size);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.fdbck-option-btn:hover:not(:disabled) {
+  border-color: var(--fdbck-accent);
+}
+
+.fdbck-option-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.fdbck-option-btn[data-selected="true"] {
+  border-color: var(--fdbck-accent);
+}
+
+/* Yes/No grid */
+.fdbck-yesno-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.fdbck-yesno-grid .fdbck-option-btn {
+  justify-content: center;
+  font-weight: 500;
+}
+
+/* Single/Multiple choice list */
+.fdbck-choice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Radio dot indicator */
+.fdbck-radio {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid var(--fdbck-indicator-border);
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s;
+}
+
+.fdbck-radio[data-selected="true"] {
+  border-color: var(--fdbck-accent);
+}
+
+.fdbck-radio-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--fdbck-accent);
+}
+
+/* Checkbox indicator */
+.fdbck-checkbox {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid var(--fdbck-indicator-border);
+  border-radius: 0.25rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+.fdbck-checkbox[data-selected="true"] {
+  border-color: var(--fdbck-accent);
+  background-color: var(--fdbck-accent);
+}
+
+.fdbck-checkbox svg {
+  width: 0.75rem;
+  height: 0.75rem;
+  color: #fff;
+}
+
+/* Submit button (multiple choice) */
+.fdbck-submit-btn {
+  margin-top: 0.5rem;
+  padding: 0.625rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--fdbck-accent);
+  color: #fff;
+  font-size: var(--fdbck-font-size);
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.fdbck-submit-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Rating grid */
+.fdbck-rating-grid {
+  display: grid;
+  gap: 0.375rem;
+}
+
+.fdbck-rating-btn {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid var(--fdbck-border);
+  border-radius: 0.5rem;
+  background: transparent;
+  color: var(--fdbck-text-primary);
+  font-size: var(--fdbck-font-size);
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s, background-color 0.15s, color 0.15s;
+}
+
+.fdbck-rating-btn:hover:not(:disabled) {
+  border-color: var(--fdbck-accent);
+}
+
+.fdbck-rating-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.fdbck-rating-btn[data-selected="true"] {
+  background-color: var(--fdbck-accent);
+  border-color: var(--fdbck-accent);
+  color: #fff;
+}
+
+.fdbck-rating-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--fdbck-text-muted);
+}

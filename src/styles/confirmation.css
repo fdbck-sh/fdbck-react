@@ -1,0 +1,40 @@
+/* fdbck widget — confirmation state */
+.fdbck-confirmation {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.fdbck-check-circle {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--fdbck-accent-alpha);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  animation: fdbck-scale-in 0.3s ease-out;
+}
+
+.fdbck-check-circle svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--fdbck-accent);
+}
+
+.fdbck-confirmation h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--fdbck-text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.fdbck-confirmation p {
+  color: var(--fdbck-text-secondary);
+  white-space: pre-line;
+}
+
+@keyframes fdbck-scale-in {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

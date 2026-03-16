@@ -1,0 +1,53 @@
+/* fdbck widget — popover mode */
+.fdbck-popover {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 2147483647;
+  animation: fdbck-slide-up 0.25s ease-out;
+}
+
+.fdbck-popover .fdbck-close-btn {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+}
+
+/* Mobile: bottom sheet */
+@media (max-width: 640px) {
+  .fdbck-popover {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 0;
+    animation: fdbck-sheet-up 0.25s ease-out;
+  }
+
+  .fdbck-popover .fdbck-card {
+    max-width: 100%;
+    width: 100%;
+    border-radius: var(--fdbck-border-radius) var(--fdbck-border-radius) 0 0;
+    border-bottom: none;
+  }
+
+  .fdbck-popover .fdbck-close-btn {
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+}
+
+@keyframes fdbck-slide-up {
+  from { transform: translateY(1rem); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fdbck-sheet-up {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fdbck-popover {
+    animation: none;
+  }
+}

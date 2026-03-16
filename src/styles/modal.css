@@ -1,0 +1,58 @@
+/* fdbck widget — modal mode */
+.fdbck-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 2147483647;
+  animation: fdbck-fade-in 0.2s ease-out;
+}
+
+.fdbck-modal-content {
+  position: relative;
+  animation: fdbck-scale-up 0.2s ease-out;
+}
+
+.fdbck-close-btn {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 1px solid var(--fdbck-border);
+  border-radius: 50%;
+  background: var(--fdbck-card-bg);
+  color: var(--fdbck-text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1;
+  transition: border-color 0.15s;
+  z-index: 1;
+}
+
+.fdbck-close-btn:hover {
+  border-color: var(--fdbck-accent);
+}
+
+@keyframes fdbck-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fdbck-scale-up {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fdbck-modal-backdrop,
+  .fdbck-modal-content {
+    animation: none;
+  }
+}

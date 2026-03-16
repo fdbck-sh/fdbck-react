@@ -1,9 +1,7 @@
 # fdbck-react
 
 [![npm version](https://img.shields.io/npm/v/fdbck-react.svg)](https://www.npmjs.com/package/fdbck-react)
-[![npm downloads](https://img.shields.io/npm/dm/fdbck-react.svg)](https://www.npmjs.com/package/fdbck-react)
 [![license](https://img.shields.io/npm/l/fdbck-react.svg)](https://www.npmjs.com/package/fdbck-react)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/fdbck-react)](https://bundlephobia.com/package/fdbck-react)
 
 Official React SDK for [fdbck](https://fdbck.sh) — embed feedback questions natively in your React app with Shadow DOM CSS isolation.
 
